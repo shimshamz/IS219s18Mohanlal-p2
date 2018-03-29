@@ -54,8 +54,23 @@ var mJson;
 
 // URL for the JSON to load by default
 // Some options for you are: images.json, images.short.json; you will need to create your own extra.json later
-var mUrl = 'insert_url_here_to_image_json';
+var mURL = './images-short.json';
 
+mRequest.onreadystatechange = function() {
+// Do something interesting if file is opened successfully
+if (mRequest.readyState == 4 && mRequest.status == 200) {
+try {
+// Let’s try and see if we can parse JSON
+mJson = JSON.parse(mRequest.responseText);
+// Let’s print out the JSON; It will likely show as "obj"
+console.log(mJson);
+} catch(err) {
+console.log(err.message)
+}
+}
+};
+mRequest.open("GET",mURL, true);
+mRequest.send();
 
 //You can optionally use the following function as your event callback for loading the source of Images from your json data (for HTMLImageObject).
 //@param A GalleryImage object. Use this method for an event handler for loading a gallery Image object (optional).
