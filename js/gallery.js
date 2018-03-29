@@ -79,10 +79,14 @@ window.addEventListener('load', function() {
 
 }, false);
 
-function GalleryImage() {
+function GalleryImage(location, description, date, img) {
 	//implement me as an object to hold the following data about an image:
 	//1. location where photo was taken
+	this.location = location;
 	//2. description of photo
+	this.description = description;
 	//3. the date when the photo was taken
+	this.date = date;
 	//4. either a String (src URL) or an an HTMLImageObject (bitmap of the photo. https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement)
+	this.img = img;
 }
