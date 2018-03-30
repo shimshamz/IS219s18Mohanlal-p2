@@ -52,22 +52,40 @@ var mImages = [];
 // Holds the retrived JSON information
 var mJson;
 
+// Holds images data in array from JSON information
+var imagesArr;
+
 // URL for the JSON to load by default
 // Some options for you are: images.json, images.short.json; you will need to create your own extra.json later
 var mURL = './images-short.json';
 
+// Holds data from images array
+var lctn;
+var desc;
+var date;
+var path;
+
 mRequest.onreadystatechange = function() {
 // Do something interesting if file is opened successfully
-if (mRequest.readyState == 4 && mRequest.status == 200) {
-try {
-// Let’s try and see if we can parse JSON
-mJson = JSON.parse(mRequest.responseText);
-// Let’s print out the JSON; It will likely show as "obj"
-console.log(mJson);
-} catch(err) {
-console.log(err.message)
-}
-}
+	if (mRequest.readyState == 4 && mRequest.status == 200) {
+		try {
+			// Let’s try and see if we can parse JSON
+			mJson = JSON.parse(mRequest.responseText);
+			// Let’s print out the JSON; It will likely show as "obj"
+			console.log(mJson);
+			imagesArr = mJson.images;
+			for(img in imagesArr) {
+				lctn = imagesArr[img].imgLocation;
+				desc = imagesArr[img].description;
+				date = imagesArr[img].date;
+				path = imagesArr[img].imgPath;
+				console.log(lctn);
+			}
+
+		} catch(err) {
+			console.log(err.message)
+		}
+	}
 };
 mRequest.open("GET",mURL, true);
 mRequest.send();
