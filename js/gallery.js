@@ -79,9 +79,9 @@ mRequest.onreadystatechange = function() {
 				desc = imagesArr[img].description;
 				date = imagesArr[img].date;
 				path = imagesArr[img].imgPath;
-				console.log(lctn);
+				mImages.push(new GalleryImage(lctn, desc, date, path));
 			}
-
+			console.log(mImages);
 		} catch(err) {
 			console.log(err.message)
 		}
