@@ -145,4 +145,5 @@ $(document).ready(function() {
 			$("div.details").slideUp();
 		}
 	});
+	$("#nextPhoto").css("float", "right");
 });
