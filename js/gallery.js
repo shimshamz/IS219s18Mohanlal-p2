@@ -42,9 +42,9 @@ function swapPhoto() {
 		mCurrentIndex = 0;
 	}
 	document.getElementById("photo").src = mImages[mCurrentIndex].img;
-	document.getElementsByClassName("location").innerHTML = "Location: " + mImages[mCurrentIndex].location;
-	document.getElementsByClassName("description").innerHTML = "Description: " + mImages[mCurrentIndex].description;
-	document.getElementsByClassName("date").innerHTML = "Date: " + mImages[mCurrentIndex].date;
+	document.getElementsByClassName("location")[0].innerHTML = "Location: " + mImages[mCurrentIndex].location;
+	document.getElementsByClassName("description")[0].innerHTML = "Description: " + mImages[mCurrentIndex].description;
+	document.getElementsByClassName("date")[0].innerHTML = "Date: " + mImages[mCurrentIndex].date;
 	mCurrentIndex++;
 }
 
