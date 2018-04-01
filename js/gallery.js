@@ -90,6 +90,9 @@ mRequest.onreadystatechange = function() {
 				mImages.push(new GalleryImage(lctn, desc, date, path));
 			}
 			document.getElementById("photo").src = mImages[mCurrentIndex].img;
+			document.getElementsByClassName("location")[0].innerHTML = "Location: " + mImages[mCurrentIndex].location;
+			document.getElementsByClassName("description")[0].innerHTML = "Description: " + mImages[mCurrentIndex].description;
+			document.getElementsByClassName("date")[0].innerHTML = "Date: " + mImages[mCurrentIndex].date;
 			console.log(mImages);
 		} catch(err) {
 			console.log(err.message)
