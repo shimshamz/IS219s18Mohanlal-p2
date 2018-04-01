@@ -134,13 +134,15 @@ function GalleryImage(location, description, date, img) {
 
 $(document).ready(function() {
 	$("img.moreIndicator").click(function() {
-	if ($("img.moreIndicator").hasClass("rot90")) {
-		$("img.moreIndicator").addClass("rot270");
-		$("img.moreIndicator").removeClass("rot90");
-	}
-	else {
-		$("img.moreIndicator").removeClass("rot270");
-		$("img.moreIndicator").addClass("rot90");
-	}
+		if ($("img.moreIndicator").hasClass("rot90")) {
+			$("img.moreIndicator").addClass("rot270");
+			$("img.moreIndicator").removeClass("rot90");
+			$("div.details").slideDown();
+		}
+		else {
+			$("img.moreIndicator").removeClass("rot270");
+			$("img.moreIndicator").addClass("rot90");
+			$("div.details").slideUp();
+		}
 	});
 });
