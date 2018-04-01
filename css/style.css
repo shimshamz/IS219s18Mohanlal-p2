@@ -60,6 +60,10 @@ body {
 	width: 42px;
 }
 
+#prevPhoto:hover, #nextPhoto:hover {
+	opacity: 0.8;
+}
+
 .details p {
 	margin-top: 20px;
 }
