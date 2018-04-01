@@ -89,6 +89,7 @@ mRequest.onreadystatechange = function() {
 				path = imagesArr[img].imgPath;
 				mImages.push(new GalleryImage(lctn, desc, date, path));
 			}
+			document.getElementById("photo").src = mImages[mCurrentIndex].img;
 			console.log(mImages);
 		} catch(err) {
 			console.log(err.message)
@@ -144,6 +145,6 @@ $(document).ready(function() {
 			$("img.moreIndicator").addClass("rot90");
 			$("div.details").slideUp();
 		}
-	});
+	});	
 	$("#nextPhoto").css("float", "right");
 });
