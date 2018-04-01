@@ -149,5 +149,27 @@ $(document).ready(function() {
 			$("div.details").slideUp();
 		}
 	});	
+	
 	$("#nextPhoto").css("float", "right");
+
+	$("#prevPhoto").click(function() {
+		if (mCurrentIndex === 0) {
+			mCurrentIndex = mImages.length - 2;
+			swapPhoto();
+		}
+		else {
+			mCurrentIndex = mCurrentIndex - 2;
+			swapPhoto();
+		}
+	});
+
+	$("#nextPhoto").click(function() {
+		if (mCurrentIndex === (mImages.length - 1)) {
+			mCurrentIndex = -1;
+			swapPhoto();
+		}
+		else {
+			swapPhoto();
+		}
+	});
 });
