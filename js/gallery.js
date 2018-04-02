@@ -32,6 +32,20 @@ function animate() {
 
 /************* DO NOT TOUCH CODE ABOVE THIS LINE ***************/
 
+function getQueryParams(qs) {
+	qs = qs.split("+").join(" ");
+	var params = {},
+	tokens,
+	re = /[?&]?([^=]+)=([^&]*)/g;
+	while (tokens = re.exec(qs)) {
+		params[decodeURIComponent(tokens[1])]
+		= decodeURIComponent(tokens[2]);
+	}
+	return params;
+}
+var $_GET = getQueryParams(document.location.search);
+console.log($_GET["json"]);
+
 function swapPhoto() {
 	//Add code here to access the #slideShow element.
 	//Access the img element and replace its source
@@ -65,7 +79,13 @@ var imagesArr;
 
 // URL for the JSON to load by default
 // Some options for you are: images.json, images.short.json; you will need to create your own extra.json later
-var mURL = './images-short.json';
+if ($_GET["json"] == 'extra.json' || $_GET["json"] == 'images-short.json') {
+	var mURL = './' + $_GET["json"];
+}
+else {
+	var mURL = './images.json';
+} 
+
 
 // Holds data from images array
 var lctn;
