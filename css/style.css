@@ -39,6 +39,11 @@ body {
 	box-shadow: 1px 3px 20px 0px;
 }
 
+#photo {
+	height: 389px;
+	width: 518px;	
+}
+
 
 .banner {
 	text-align: center;
