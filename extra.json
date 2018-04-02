@@ -1,0 +1,34 @@
+{
+    "images": [
+        {
+            "imgPath": "img/extra/ny.jpg",
+            "imgLocation": "New York City",
+            "description": "McLaren 720S and Porsche 918 Spyder",
+            "date": "09/16/2017"
+        },
+        {
+            "imgPath": "img/extra/sa1.jpg",
+            "imgLocation": "South Africa",
+            "description": "Lion at Nambiti Game Reserve",
+            "date": "01/05/2017"
+        },
+        {
+            "imgPath": "img/extra/njit.jpg",
+            "imgLocation": "New Jersey Institute of Technology",
+            "description": "A cold winter day",
+            "date": "12/17/2016"
+        },
+        {
+            "imgPath": "img/extra/dxb.jpg",
+            "imgLocation": "Dubai",
+            "description": "Dubai skyline from the sky",
+            "date": "12/24/2016"
+        },
+        {
+            "imgPath": "img/extra/sa2.jpg",
+            "imgLocation": "South Africa",
+            "description": "A few fast cars",
+            "date": "05/21/2017"
+        }
+  ]
+}
